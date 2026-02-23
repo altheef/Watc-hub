@@ -1,0 +1,744 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>luxury Watch Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+  /* Interactive effects */
+  .wm-nav-link {
+    transition: color 0.25s ease, background-color 0.25s ease;
+    border-radius: 0.35rem;
+  }
+
+  .wm-nav-link:hover,
+  .wm-nav-link:focus-visible {
+    color: #0d6efd !important;
+    background-color: rgba(13, 110, 253, 0.08);
+    cursor: pointer;
+  }
+
+  .wm-nav-icon-btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .wm-nav-icon-btn:hover,
+  .wm-nav-icon-btn:focus-visible {
+    transform: translateY(-2px);
+    border-color: #0d6efd;
+    box-shadow: 0 0.45rem 0.9rem rgba(13, 110, 253, 0.2);
+    cursor: pointer;
+  }
+
+  .wm-collection-card,
+  #brands .card.shadow-sm,
+  .card.shadow-sm[class*="hover:border"] {
+    border: 1px solid transparent;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    cursor: pointer;
+  }
+
+  .wm-collection-card .wm-collection-body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .wm-collection-card:hover,
+    #brands .card.shadow-sm:hover,
+    .card.shadow-sm[class*="hover:border"]:hover {
+      transform: translate3d(0, -8px, 0);
+      box-shadow: 0 1rem 1.8rem rgba(0, 0, 0, 0.18) !important;
+      border-color: rgba(13, 110, 253, 0.35);
+    }
+
+    .wm-collection-card:hover .wm-collection-body {
+      background-color: #0b5ed7 !important;
+      color: #ffffff;
+    }
+
+    .wm-collection-card:hover .wm-collection-meta {
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+  }
+</style>
+  <style>
+    .wm-hero-img {
+      height: 88vh;
+      object-fit: cover;
+    }
+
+   <img src="watch.jpg"
+class="w-100 object-fit-cover"
+style="height:clamp(300px, 60vh, 100vh);">
+  </style>
+</head>
+
+
+<body class="bg-light">
+
+  <div class="bg-dark text-white text-center py-3 small">40+ INTERNATIONAL BRANDS | ONE TRUSTED DESTINATION</div>
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom shadow-sm gap-4">
+    <div class="container-fluid px-3 px-lg-4">
+      <a class="navbar-brand fw-bold" href="#home"><i class="bi bi-watch text-primary me-2"></i>WATCH HUB</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2 text-center">
+          <li class="nav-item"><a
+              class="nav-link wm-nav-link active text-primary fw-semibold border-bottom border-2 border-primary"
+              href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link wm-nav-link text-dark fw-semibold" href="#collections">Collections</a>
+          </li>
+          <li class="nav-item"><a class="nav-link wm-nav-link text-dark fw-semibold" href="#brands">Brands</a></li>
+        
+          <li class="nav-item"><a class="nav-link wm-nav-link text-dark fw-semibold" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center justify-content-center gap-2 mt-2 mt-lg-0 ms-lg-3"
+          aria-label="Quick actions">
+          <a class="btn wm-nav-icon-btn btn-outline-primary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center p-2"
+            href="#" aria-label="Search">
+            <img src="./search.png" class="img-fluid" alt="Search" width="19" height="19">
+          </a>
+          <a class="btn wm-nav-icon-btn btn-outline-primary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center p-2"
+            href="#cart" aria-label="Shopping cart">
+            <img src="./shopping-cart.png" class="img-fluid" alt="Shopping cart" width="19" height="19">
+          </a>
+          <a class="btn wm-nav-icon-btn btn-outline-primary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center p-2"
+            href="#" aria-label="User account">
+            <img src="./user.png" class="img-fluid" alt="User account" width="19" height="19">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div id="watchCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#watchCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#watchCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#watchCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="./a1.jpg" class="d-block w-100 wm-hero-img" alt="Watch hero">
+          <div class="carousel-caption text-start d-none d-md-block">
+            <h1 class="display-5 fw-bold">Watchoholic Sale</h1>
+            <p>Premium watches with best offers.</p>
+            <a href="#collections" class="btn btn-primary">Shop Collection</a>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="./a3.jpg" class="d-block w-100 wm-hero-img" alt="Watch hero 2">
+          <div class="carousel-caption text-start d-none d-md-block">
+            <h2 class="fw-bold">Luxury and Sport Watches</h2>
+            <a href="#brands" class="btn btn-outline-primary">View Brands</a>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="./a6.jpg" class="d-block w-100 wm-hero-img" alt="Watch hero 3">
+          <div class="carousel-caption text-start d-none d-md-block">
+            <h2 class="fw-bold">New Arrivals</h2>
+            <p>Explore fresh models and timeless classics.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#watchCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#watchCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <div class="border rounded-1 py-3"><i class="bi bi-shield-check text-primary shadow-sm "></i>
+            Buy with Trust</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="border rounded-3 py-3"><i class="bi bi-gem text-primary"></i> Premium Brands</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="border rounded-3 py-3"><i class="bi bi-truck text-primary"></i> Fast Delivery</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="border rounded-3 py-3"><i class="bi bi-arrow-repeat text-primary"></i> Easy Returns</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="collections" class="py-1">
+    <div class="container-fluid px-3 px-lg-1">
+      <div
+        class="d-flex flex-column flex-sm-row gap-2 justify-content-between align-items-start align-items-sm-center mb-3">
+        <h2 class="h1 mb-0 ">Home / Watch Collections</h2>
+        <select class="form-select w-100 w-sm-auto" aria-label="Sort">
+          <option selected>Best Sellers</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest</option>
+        </select>
+      </div>
+
+      <div class="d-lg-none mb-3">
+        <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileFilters"
+          aria-controls="mobileFilters">
+          <i class="bi bi-funnel"></i> Filter
+        </button>
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileFilters" aria-labelledby="mobileFiltersLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileFiltersLabel">Filters</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="accordion" id="mobileFilterAcc">
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#mfBrand">Brands</button></h2>
+              <div id="mfBrand" class="accordion-collapse collapse show" data-bs-parent="#mobileFilterAcc">
+                <div class="accordion-body">Rolex, Casio, Hublot, Omega,hubolt,ferari, patek philppe,Aaudemars piguet,
+                  seiko,hamilton,tissot, loginess,rado ,taghueur,</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#mfType">Type</button></h2>
+              <div id="mfType" class="accordion-collapse collapse" data-bs-parent="#mobileFilterAcc">
+                <div class="accordion-body">Classic, Sport, Luxury</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#mfPrice">Price</button></h2>
+              <div id="mfPrice" class="accordion-collapse collapse" data-bs-parent="#mobileFilterAcc">
+                <div class="accordion-body">Under Rs.10,000, Rs.10,000-Rs.50,000, Above Rs.50,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <aside class="col-lg-3 d-none d-lg-block">
+          <div class="card sticky-top shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300" style="top: 85px;">
+            <div class="card-header fw-semibold">Filters</div>
+            <div class="card-body">
+              <h6>Brands</h6>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f1"><label
+                  class="form-check-label" for="f1">Rolex</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f2"><label
+                  class="form-check-label" for="f2">Casio</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f3"><label
+                  class="form-check-label" for="f3">Hublot</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f4"><label
+                  class="form-check-label" for="f4">Rado</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f5"><label
+                  class="form-check-label" for="f5">AP</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f6"><label
+                  class="form-check-label" for="f6">Taghuere</label></div>
+
+
+             
+<hr>
+ <label class="form-label">
+                Price: Range. <span id="priceValue">200000</span>
+              </label>
+              <input type="range" class="form-range" id="priceRange" min="10000" max="2000000" step="1000"
+                value="2000000">
+              <hr>
+              <h6>Type</h6>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f7"><label
+                  class="form-check-label" for="f7">Luxury</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f8"><label
+                  class="form-check-label" for="f8">Sport</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f9"><label
+                  class="form-check-label" for="f9">Classic</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f10"><label
+                  class="form-check-label" for="f10">modern</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f11"><label
+                  class="form-check-label" for="f11">mens</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f12"><label
+                  class="form-check-label" for="f12">womens</label></div>
+
+
+              <hr>
+
+              <h6>sizes</h6>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f13"><label
+                  class="form-check-label" for="f13">24mm</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f14"><label
+                  class="form-check-label" for="f14">34mm</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f15"><label
+                  class="form-check-label" for="f15">36mm</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f16"><label
+                  class="form-check-label" for="f16">43mm</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f17"><label
+                  class="form-check-label" for="f17">46mm</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="f18"><label
+                  class="form-check-label" for="f18">48mm</label></div>
+
+            </div>
+          </div>
+        </aside>
+
+        <div class="  collections col-lg-9">
+          <div class="row g-4">
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a2.jpg" class="w-100 h-100 object-fit-cover" alt="Rolex">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Rolex</h5>
+                  <p class="text-muted small wm-collection-meta">Men | Automatic</p>
+                  <p class="fw-bold mb-0">Rs. 1,49,000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a7.jpg" class="w-100 h-100 object-fit-cover" alt="Rolex blue">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Rolex Blue Dial</h5>
+                  <p class="text-muted small wm-collection-meta">Men | Automatic</p>
+                  <p class="fw-bold mb-0">Rs. 2,10,000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a9.jpg" class="w-100 h-100 object-fit-cover" alt="GShock">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Casio G-Shock Red</h5>
+                  <p class="text-muted small wm-collection-meta">Sport | Digital</p>
+                  <p class="fw-bold mb-0">Rs. 9,995</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a10.jpg" class="w-100 h-100 object-fit-cover" alt="GShock black">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Casio G-Shock Black</h5>
+                  <p class="text-muted small wm-collection-meta">Sport | Tough</p>
+                  <p class="fw-bold mb-0">Rs. 8,995</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a11.jpg" class="w-100 h-100 object-fit-cover" alt="Skeleton watch">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Skeleton Gold Tone</h5>
+                  <p class="text-muted small wm-collection-meta">Classic | Men</p>
+                  <p class="fw-bold mb-0">Rs. 21,500</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a18.jpg" class="w-100 h-100 object-fit-cover" alt="Silver gold watch">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Silver Gold </h5>
+                  <p class="text-muted small wm-collection-meta">Unisex | Classic</p>
+                  <p class="fw-bold mb-3">Rs. 17,995</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a17.jpg" class="w-100 h-100 object-fit-cover" alt="GShock">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Casio G-Shock Red</h5>
+                  <p class="text-muted small wm-collection-meta">Sport | Digital</p>
+                  <p class="fw-bold mb-0">Rs. 9,995</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a16.jpg" class="w-100 h-100 object-fit-cover" alt="GShock">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Casio G-Shock blue</h5>
+                  <p class="text-muted small wm-collection-meta">Sport | analog</p>
+                  <p class="fw-bold mb-0">Rs. 14000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a15.jpg" class="w-100 h-100 object-fit-cover" alt="GShock">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Cartier</h5>
+                  <p class="text-muted small wm-collection-meta">Classic | analog</p>
+                  <p class="fw-bold mb-0">Rs. 17000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a12.jpeg" class="w-100 h-100 object-fit-cover" alt="GShock">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">Casio g shock</h5>
+                  <p class="text-muted small wm-collection-meta"> | Digital</p>
+                  <p class="fw-bold mb-0">Rs. 70000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a13.jpg" class="w-100 h-100 object-fit-cover" alt="GShock">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">rolex</h5>
+                  <p class="text-muted small wm-collection-meta">Sport | Digital</p>
+                  <p class="fw-bold mb-0">Rs. 120000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-4">
+
+              <div class="card h-100 shadow-sm wm-collection-card bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+                <div class="ratio ratio-4x3 bg-light rounded-top overflow-hidden">
+                  <img src="./a11.jpg" class="w-100 h-100 object-fit-cover" alt="GShock">
+                </div>
+                <div class="card-body bg-primary wm-collection-body">
+                  <h5 class="card-title">patek phillpe</h5>
+                  <p class="text-muted small wm-collection-meta">Classic | luxury</p>
+                  <p class="fw-bold mb-0">Rs. 140000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="brands" class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-4 align-items-center mb-4">
+        <div class="col-lg-7">
+          <h2 class="h1 fw-bold mb-3 text-center">Watch Brand Logos</h2>
+          <p class="text-muted mb-0">.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./armani.jpeg"
+                class="img-fluid object-fit-contain mh-100" alt="Armani"></div>
+            <div class="card-footer text-center small fw-semibold">Armani</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./casio.png"
+                class="img-fluid object-fit-contain mh-100" alt="Casio"></div>
+            <div class="card-footer text-center small fw-semibold">Casio</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./hubolt.png"
+                class="img-fluid object-fit-contain mh-100" alt="Hublot"></div>
+            <div class="card-footer text-center small fw-semibold">Hublot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./omega.png"
+                class="img-fluid object-fit-contain mh-100" alt="Omega"></div>
+            <div class="card-footer text-center small fw-semibold">Omega</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./loginess.png"
+                class="img-fluid object-fit-contain mh-100" alt="Longines"></div>
+            <div class="card-footer text-center small fw-semibold">Longines</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./patekphippe.png"
+                class="img-fluid object-fit-contain mh-100" alt="Patek Philippe">
+            </div>
+            <div class="card-footer text-center small fw-semibold">Patek Philippe</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./taghuere.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tag Heuer"></div>
+            <div class="card-footer text-center small fw-semibold">Tag Heuer</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./rado.jpeg"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./patekphippe.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./omega.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./armani.jpeg"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./loginess.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./casio.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./taghuere.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card h-100 shadow-sm bg-yellow-300 py-3 px-8 rounded-3xl font-medium mr-4 hover:bg-transparent hover:border hover:border-yellow-300 duration-300">
+            <div class="card-body d-flex align-items-center justify-content-center py-3"><img src="./tiisot.png"
+                class="img-fluid object-fit-contain mh-100" alt="Tissot"></div>
+            <div class="card-footer text-center small fw-semibold">Tissot</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+ 
+
+  </section>
+  <footer id="contact" class="bg-dark text-white py-5 mt-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4 text-center text-md-start">
+          <h6> watchhub Store</h6>
+          <p class="small mb-0">Trusted destination for premium watches.</p>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-start">
+          <h6>Sections</h6><a href="#collections"
+            class="text-white-50 text-decoration-none d-block small">Collections</a><a href="#brands"
+            class="text-white-50 text-decoration-none d-block small">Brands</a>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-start">
+          <h6>Contact</h6>
+          <p class="small mb-0">support@watchhub.com</p>
+        </div>
+      </div>
+      <hr>
+      <div class="small text-center">&copy; 2026 WATCH HUB</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-md-down modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Watch Hub 50% Offer</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img class="img-fluid rounded w-100 object-fit-cover"
+            src="./black-friday-super-sale-web-banner-template_120329-1094.avif" alt="Watch offer banner">
+          <p class="mt-3 mb-2">Hurry, offer ends soon today. Crab your loved watches.</p>
+          <a href="#collections" class="btn btn-outline-primary">Visit More</a>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var modalEl = document.getElementById('exampleModal');
+      if (modalEl) {
+        var welcomeModal = new bootstrap.Modal(modalEl);
+        welcomeModal.show();
+      }
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const priceRange = document.getElementById("priceRange");
+      const priceValue = document.getElementById("priceValue");
+      if (!priceRange || !priceValue) return;
+
+      const cards = document.querySelectorAll(".wm-collection-card");
+
+      function parsePrice(card) {
+        const tag = card.querySelector(".fw-bold");
+        if (!tag) return NaN;
+        const num = tag.textContent.replace(/[^\d]/g, "");
+        return parseInt(num, 10);
+      }
+
+      function applyFilter(maxPrice) {
+        priceValue.textContent = maxPrice.toLocaleString("en-IN");
+
+        cards.forEach(function (card) {
+          const price = parsePrice(card);
+          const col = card.closest(".col-sm-6, .col-md-6, .col-xl-4") || card.parentElement;
+          if (!col) return;
+
+          if (Number.isNaN(price) || price <= maxPrice) {
+            col.style.display = "";
+          } else {
+            col.style.display = "none";
+          }
+        });
+      }
+
+      applyFilter(parseInt(priceRange.value, 10));
+
+      priceRange.addEventListener("input", function () {
+        applyFilter(parseInt(this.value, 10));
+      });
+    });
+  </script>
+</body>
+
+</html>
+
+
+
